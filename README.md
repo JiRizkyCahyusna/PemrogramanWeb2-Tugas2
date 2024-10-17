@@ -709,6 +709,12 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 </body>
 </html>
 ```
+
+- Kode HTML di atas adalah sebuah halaman beranda yang dirancang untuk admin dalam sebuah sistem informasi akademik. Pertama, halaman ini dimulai dengan mendeklarasikan tipe dokumen dan menyetel pengaturan karakter dan responsivitas menggunakan elemen `<meta>`. 
+- Selanjutnya, Bootstrap CSS dan JavaScript dimuat untuk memberikan desain yang responsif dan tampilan yang menarik.
+- Pada bagian `<style>`, terdapat definisi CSS untuk memposisikan konten di tengah layar secara vertikal dan horizontal, serta mengatur ukuran font untuk judul. Di dalam elemen `<body>`, terdapat navigasi bar menggunakan komponen Bootstrap, yang berisi tautan untuk navigasi ke berbagai halaman terkait admin, seperti "Overview" dan "Mahasiswa", serta dropdown untuk nilai perbaikan di mata pelajaran Matematika dan Pemrograman Web. 
+- Konten utama halaman menampilkan pesan selamat datang kepada admin, dengan ukuran teks besar dan penjelasan tambahan yang memberi tahu admin tentang fungsionalitas halaman ini. Halaman ini secara keseluruhan dirancang untuk menjadi intuitif dan mudah dinavigasi, memungkinkan admin untuk mengelola data dengan efisien.
+
 ### Output yang dihasilkan:
 ![alt text](/img/beranda_admin.png)
 
