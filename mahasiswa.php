@@ -23,7 +23,5 @@ class Mahasiswa extends Database {
         }
         return $hasil; // Mengembalikan array yang berisi data mahasiswa
     }
-   
 }
-
 ?>

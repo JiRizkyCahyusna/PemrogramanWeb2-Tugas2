@@ -29,36 +29,40 @@ $dataPweb = $Pweb->tampilData();
     </div>
     <!-- Menu navigasi utama -->
     <ul class="nav navbar-nav">
-      <!-- Memeriksa role (admin atau mahasiswa) melalui parameter URL -->
-    <?php if ($_GET['role'] == "admin") {?>
-      <!-- Jika role adalah admin, tampilkan menu khusus untuk admin -->
-      <li><a href="beranda_data.php?role=admin">Overview</a></li> <!-- Link ke halaman overview -->
-     <li><a href="tampil_mahasiswa.php?role=admin"> Mahasiswa</a></li> <!-- Link ke halaman daftar mahasiswa -->
-     <li class="dropdown active"> <!-- Dropdown menu untuk nilai perbaikan -->
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-       Nilai Perbaikan <span class="caret"></span>
-       </a>
-       <ul class="dropdown-menu">
-        <!-- Menu perbaikan nilai Matematika dan Pemrograman Web untuk admin -->
-         <li><a href="perbaikan_mtk.php?role=admin">Matematika</a></li>
-         <li><a href="perbaikan_pweb.php?role=admin">Pemrograman Web</a></li>
-       </ul>
-       <?php } elseif ($_GET['role'] == "mahasiswa") {?>
-        <!-- Jika role adalah mahasiswa, tampilkan menu khusus untuk mahasiswa -->
-         <li class="dropdown active">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-       Nilai Perbaikan <span class="caret"></span>
-       </a>
-       <ul class="dropdown-menu">
-        <!-- Menu perbaikan nilai Matematika dan Pemrograman Web untuk mahasiswa -->
-         <li><a href="perbaikan_mtk.php?role=mahasiswa">Matematika</a></li>
-         <li><a href="perbaikan_pweb.php?role=mahasiswa">Pemrograman Web</a></li>
-       </ul>
-     </li>
-     <?php } ?>
+    <!-- Memeriksa role (admin atau mahasiswa) melalui parameter URL -->
+<?php if (isset($_GET['role']) && $_GET['role'] == "admin") { ?>
+  <!-- Jika role adalah admin, tampilkan menu khusus untuk admin -->
+  <li><a href="beranda_data.php?role=admin">Overview</a></li> <!-- Link ke halaman overview -->
+  <li><a href="tampil_mahasiswa.php?role=admin">Mahasiswa</a></li> <!-- Link ke halaman daftar mahasiswa -->
+  <li class="dropdown active"> <!-- Dropdown menu untuk nilai perbaikan -->
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      Nilai Perbaikan <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <!-- Menu perbaikan nilai Matematika dan Pemrograman Web untuk admin -->
+      <li><a href="perbaikan_mtk.php?role=admin">Matematika</a></li>
+      <li><a href="perbaikan_pweb.php?role=admin">Pemrograman Web</a></li>
+    </ul>
+  </li>
+    </div>
+    
+<?php } elseif (isset($_GET['role']) && $_GET['role'] == "mahasiswa") { ?>
+  <!-- Jika role adalah mahasiswa, tampilkan menu khusus untuk mahasiswa -->
+  <li class="dropdown active">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      Nilai Perbaikan <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <!-- Menu perbaikan nilai Matematika dan Pemrograman Web untuk mahasiswa -->
+      <li><a href="perbaikan_mtk.php?role=mahasiswa">Matematika</a></li>
+      <li><a href="perbaikan_pweb.php?role=mahasiswa">Pemrograman Web</a></li>
+    </ul>
+  </li>
+<?php } ?>
     </ul>
   </div>
 </nav>
+
   
   
 <div class="container mt-3">

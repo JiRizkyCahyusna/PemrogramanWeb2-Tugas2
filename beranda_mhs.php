@@ -29,7 +29,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="beranda.php">Beranda</a>
+      <a class="navbar-brand" href="#">Beranda</a>
     </div>
     <!-- Menu navigasi utama -->
     <ul class="nav navbar-nav"> 

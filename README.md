@@ -11,7 +11,7 @@
 
 
 ### Penyelesaian:
-## 1. Membuat View berbasis OOP, dengan mengambil data dari database MySQL
+### 1. Membuat View berbasis OOP, dengan mengambil data dari database MySQL
 #### Langkah 1 
 - Membuat Database yaitu persuratan, setelah membuat database lalu membuat tabel Mahasiswa:
 ![alt text](/img/tabel_mahasiswa.png)
@@ -62,7 +62,7 @@ class Database {
 }
 ?>
 ```
-## Penjelasan: 
+### Penjelasan: 
 1. Mendefinisikan Kelas Database:
 Kelas Database dibuat untuk mengelola koneksi dan operasi terhadap database MySQL.
     - Properti: Ada beberapa properti yang disiapkan untuk menyimpan informasi koneksi ke database. <br>
@@ -157,7 +157,7 @@ Dimulai dengan `<!DOCTYPE html>` yang menentukan tipe dokumen sebagai HTML5.
 ![alt text](/img/beranda.png)
 
 
-## 2. Gunakan _construct sebagai link ke database
+### 2. Gunakan _construct sebagai link ke database
 ```php
 // Konstruktor kelas yang otomatis dijalankan saat objek dibuat
     public function __construct() {
@@ -179,7 +179,7 @@ Dimulai dengan `<!DOCTYPE html>` yang menentukan tipe dokumen sebagai HTML5.
 ```
 - construktor akan memanggil metode koneksi() secara otomatis untuk membuka koneksi ke database. Metode koneksi() bertugas untuk membuat koneksi ke database menggunakan mysqli.
 
-## 3. Terapkan enkapsulasi sesuai logika studi kasus
+### 3. Terapkan enkapsulasi sesuai logika studi kasus
 
 Berikut adalah coding secara keseluruhan yang dibuat:
 ```php
@@ -228,7 +228,7 @@ class Database {
 Koneksi ke database disimpan sebagai protected, artinya bisa diakses oleh kelas turunan (pewarisan).
 Pengaksesan dan pengelolaan data dilakukan melalui metode yang jelas, seperti `query()` dan `koneksi()`, memastikan bahwa informasi sensitif seperti kredensial database tidak bisa diakses langsung dari luar kelas.
 
-## 4. Membuat kelas turunan menggunakan konsep pewarisan
+### 4. Membuat kelas turunan menggunakan konsep pewarisan
 ```php
 <?php
 // Memanggil file database.php yang berisi koneksi ke database
@@ -292,18 +292,17 @@ class Nilai_Perbaikan extends Database {
 <?php
 // Memastikan file nilai_perbaikan.php sudah di-include
 require_once 'nilai_perbaikan.php';
-// Membuat kelas Matkul yang mewarisi kelas Nilai_Perbaikan
-class Matkul extends Nilai_Perbaikan{
+// Membuat kelas Matematika yang mewarisi kelas Nilai_Perbaikan
+class Matematika extends Nilai_Perbaikan{
     // Construktor untuk inisialisasi koneksi
      public function __construct() {
          parent::__construct(); // Mewarisi koneksi dari kelas Database
      }
  
-    // Metode untuk mengambil data nilai perbaikan berdasarkan nama mata kuliah
-    public function tampilData($matkul=null) {
-        // Membuat query SQL untuk mengambil semua data nilai perbaikan yang sesuai dengan mata kuliah yang diberikan
-        // Jika $matkul adalah null, query ini bisa menjadi tidak efektif, sebaiknya dilakukan pemeriksaan lebih lanjut
-        $sql = "SELECT * FROM nilai_perbaikan where matkul = '". $matkul ."'";
+    // Metode untuk mengambil data nilai perbaikan berdasarkan mata kuliah matematika
+    public function tampilData() {
+        // Membuat query SQL untuk mengambil semua data nilai perbaikan yang sesuai dengan mata kuliah Matematika
+        $sql = "SELECT * FROM nilai_perbaikan where matkul = 'Matematika'";
         $result = $this->koneksi->query($sql); // Menjalankan query dan menyimpan hasilnya
         // Membuat array kosong untuk menampung hasil query
         $hasil = [];
@@ -313,12 +312,93 @@ class Matkul extends Nilai_Perbaikan{
                  $hasil[] = $row;  // Menambahkan data ke dalam array hasil
              }
          }
-        return $hasil; // Mengembalikan array yang berisi Matakuliah
+        return $hasil; // Mengembalikan array yang berisi Matakuliah Matematika
      }
  
  }
- ?>
- ```
+ // Membuat kelas Pweb yang mewarisi kelas Nilai_Perbaikan
+ class Pweb extends Nilai_Perbaikan{
+    // Construktor untuk inisialisasi koneksi
+     public function __construct() {
+         parent::__construct(); // Mewarisi koneksi dari kelas Database
+     }
+ 
+    // Metode untuk mengambil data nilai perbaikan berdasarkan mata kuliah PemrogramanWeb
+    public function tampilData() {
+        // Membuat query SQL untuk mengambil semua data nilai perbaikan yang sesuai dengan mata kuliah Matematika
+        $sql = "SELECT * FROM nilai_perbaikan where matkul = 'Pemrograman Web'";
+        $result = $this->koneksi->query($sql); // Menjalankan query dan menyimpan hasilnya
+        // Membuat array kosong untuk menampung hasil query
+        $hasil = [];
+        if ($result && $result->num_rows > 0) { // Mengecek apakah hasil query tidak kosong
+            // Mengambil setiap baris data dari hasil query dan menyimpannya ke dalam array
+             while ($row = $result->fetch_assoc()) { 
+                 $hasil[] = $row;  // Menambahkan data ke dalam array hasil
+             }
+         }
+        return $hasil; // Mengembalikan array yang berisi Matakuliah Pemrograman Web
+     }
+ 
+}
+?>
+```
+### 5. Terapkan polimorfisme untuk minimal 2 peran sesuai dengan studi kasus
+```php
+<?php
+// Memastikan file nilai_perbaikan.php sudah di-include
+require_once 'nilai_perbaikan.php';
+// Membuat kelas Matematika yang mewarisi kelas Nilai_Perbaikan
+class Matematika extends Nilai_Perbaikan{
+    // Construktor untuk inisialisasi koneksi
+     public function __construct() {
+         parent::__construct(); // Mewarisi koneksi dari kelas Database
+     }
+ 
+    // Metode untuk mengambil data nilai perbaikan berdasarkan mata kuliah matematika
+    public function tampilData() {
+        // Membuat query SQL untuk mengambil semua data nilai perbaikan yang sesuai dengan mata kuliah Matematika
+        $sql = "SELECT * FROM nilai_perbaikan where matkul = 'Matematika'";
+        $result = $this->koneksi->query($sql); // Menjalankan query dan menyimpan hasilnya
+        // Membuat array kosong untuk menampung hasil query
+        $hasil = [];
+        if ($result && $result->num_rows > 0) { // Mengecek apakah hasil query tidak kosong
+            // Mengambil setiap baris data dari hasil query dan menyimpannya ke dalam array
+             while ($row = $result->fetch_assoc()) { 
+                 $hasil[] = $row;  // Menambahkan data ke dalam array hasil
+             }
+         }
+        return $hasil; // Mengembalikan array yang berisi Matakuliah Matematika
+     }
+ 
+ }
+ // Membuat kelas Pweb yang mewarisi kelas Nilai_Perbaikan
+ class Pweb extends Nilai_Perbaikan{
+    // Construktor untuk inisialisasi koneksi
+     public function __construct() {
+         parent::__construct(); // Mewarisi koneksi dari kelas Database
+     }
+ 
+    // Metode untuk mengambil data nilai perbaikan berdasarkan mata kuliah PemrogramanWeb
+    public function tampilData() {
+        // Membuat query SQL untuk mengambil semua data nilai perbaikan yang sesuai dengan mata kuliah Matematika
+        $sql = "SELECT * FROM nilai_perbaikan where matkul = 'Pemrograman Web'";
+        $result = $this->koneksi->query($sql); // Menjalankan query dan menyimpan hasilnya
+        // Membuat array kosong untuk menampung hasil query
+        $hasil = [];
+        if ($result && $result->num_rows > 0) { // Mengecek apakah hasil query tidak kosong
+            // Mengambil setiap baris data dari hasil query dan menyimpannya ke dalam array
+             while ($row = $result->fetch_assoc()) { 
+                 $hasil[] = $row;  // Menambahkan data ke dalam array hasil
+             }
+         }
+        return $hasil; // Mengembalikan array yang berisi Matakuliah Pemrograman Web
+     }
+ 
+}
+?>
+```
+- Matematika: Kelas ini mewarisi Nilai_Perbaikan dan digunakan untuk mengambil data perbaikan nilai khusus untuk mata kuliah Matematika.
+- Pweb: Kelas ini mewarisi Nilai_Perbaikan dan digunakan untuk mengambil data perbaikan nilai khusus untuk mata kuliah Pemrograman Web.
 
  
 
