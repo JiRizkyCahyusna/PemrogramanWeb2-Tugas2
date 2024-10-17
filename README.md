@@ -456,6 +456,9 @@ $dataPweb = $Pweb->tampilData();
 - Dalam coding di atas, dapat memanggil metode `tampilData()` pada objek yang berbeda ($matematika dan $pweb), hasil yang diperoleh akan berbeda sesuai dengan implementasi spesifik dari setiap kelas. Polimorfisme memungkinkan penggunaan metode yang sama dengan perilaku yang berbeda, meningkatkan fleksibilitas dan keterbacaan kode.
 <br> <br>
 
+### Output yang dihasilkan:
+
+
 ### 6. Menampilkan data mahasiswa dan data nilai perbaikan/Overview (beranda_data)
 - pada beranda_data.php adalah halaman utama yang menampilkan daftar mahasiswa dan nilai perbaikan mereka, di mana data tersebut diambil langsung dari database dan ditampilkan menggunakan antarmuka Bootstrap.
 <br>
@@ -739,7 +742,7 @@ b. Data Mahasiswa
 <br><br>
 - Dropdown Nilai Perbaikan (Matematika dan PWEB )<br>
 c. Memilih Salah satu dari dropdown yang ada (antara Matematika dan Pweb) bisa mengakses keduanya tetapi secara bergantian
-![alt text](/img/dropdownnilai.png)
+![alt text](/img/dropdownilai_admn.png)
 <br><br>
 d. Data nilai perbaikan Matematika
 ![alt text](/img/nilaimtk_admn.png)
@@ -828,7 +831,7 @@ e. Data nilai perbaikan Pemrograman Web
 <br><br>
 - Pada Role Mahasiswa hanya dapat Melihat Data Nilai Perbaikan Matematika dan PWEB <br>
 a. Memilih Salah satu dari dropdown yang ada (antara Matematika dan Pweb) bisa mengakses keduanya tetapi secara bergantian
-![alt text](/img/dropdownnilai.png)
+![alt text](/img/dropdownnilai_mhs.png)
 <br><br>
 b. Data nilai perbaikan Matematika
 ![alt text](/img/nilaimtk_mhs.png)
@@ -1228,3 +1231,37 @@ $dataMahasiswa = $mahasiswa->tampilData();
 
 ### Output yang Dihasilkan:
 ![alt text](/img/dataMahasiswa.png)
+
+### Tampilkan Seluruh Output:
+![alt text](/img/beranda.png)
+<br><br>
+### User role Admin:
+![alt text](/img/beranda_admin.png)
+a. Keseluruhan Data (Overview)
+![alt text](/img/overview1.png)
+![alt text](/img/overview2.png)
+<br><br>
+b. Data Mahasiswa
+![alt text](/img/dataMahasiswa.png)
+<br><br>
+c. Memilih Salah satu dari dropdown yang ada (antara Matematika dan Pweb) bisa mengakses keduanya tetapi secara bergantian
+![alt text](/img/dropdownilai_admn.png)
+<br><br>
+d. Data nilai perbaikan Matematika
+![alt text](/img/nilaimtk_admn.png)
+<br><br>
+e. Data nilai perbaikan Pemrograman Web
+![alt text](/img/nilaipweb_admn.png)
+<br><br>
+### User Role Mahasiswa:
+![alt text](/img/beranda_mhs.png)
+<br><br>
+a. Memilih Salah satu dari dropdown yang ada (antara Matematika dan Pweb) bisa mengakses keduanya tetapi secara bergantian
+![alt text](/img/dropdownnilai_mhs.png)
+<br><br>
+b. Data nilai perbaikan Matematika
+![alt text](/img/nilaimtk_mhs.png)
+<br><br>
+c. Data nilai perbaikan Pemrograman Web
+![alt text](/img/nilaipweb_mhsw.png)
+
