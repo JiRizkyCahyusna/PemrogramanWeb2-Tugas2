@@ -2,7 +2,7 @@
 // Memanggil file Mahasiswa.php
 require_once 'Mahasiswa.php';
 // Memanggil file Nilai_perbaikan.php
-require_once 'Nilai_perbaikan.php';
+require_once 'nilai_perbaikan.php';
 
 // Membuat instance dari kelas Mahasiswa
 $mahasiswa = new Mahasiswa();

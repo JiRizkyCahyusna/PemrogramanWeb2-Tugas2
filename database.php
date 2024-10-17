@@ -10,12 +10,6 @@ class Database {
 
     // Konstruktor kelas yang otomatis dijalankan saat objek dibuat
     public function __construct() {
-        // Memanggil metode koneksi() untuk membuka koneksi ke database saat kelas diinstansiasi
-        $this->koneksi();
-    }
-
-    // Metode koneksi yang bertugas membuat koneksi ke database
-    public function koneksi() {
         // Membuat koneksi menggunakan mysqli dengan informasi yang telah didefinisikan di properti
         $this->koneksi = new mysqli($this->host, $this->username, $this->password, $this->database);
         

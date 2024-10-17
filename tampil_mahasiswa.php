@@ -1,6 +1,6 @@
 <?php
 // Memanggil file Mahasiswa.php
-require_once 'Mahasiswa.php';
+require_once 'mahasiswa.php';
 
 // Membuat instance dari kelas Mahasiswa
 $mahasiswa = new Mahasiswa();

@@ -25,4 +25,5 @@ class Mahasiswa extends Database {
     }
    
 }
+
 ?>

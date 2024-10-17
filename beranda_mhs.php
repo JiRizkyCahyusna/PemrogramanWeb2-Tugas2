@@ -52,10 +52,13 @@
 <!-- Konten Utama -->
 <div class="container center-content">
   <div>
-    <h1>Selamat Datang di Sistem Informasi Akademik</h1><!-- Teks utama di halaman beranda yang berada di tengah dengan ukuran besar -->
-    <p>Akses data mahasiswa dan nilai perbaikan.</p> <!-- Subjudul atau teks tambahan --
+    <!-- Teks utama di halaman beranda mahasiswa yang berada di tengah dengan ukuran besar -->
+    <h2>Selamat Datang, Mahasiswa!</h2>
+    
+    <!-- Subjudul atau teks tambahan untuk memberikan informasi kepada mahasiswa -->
+    <p>Anda dapat melihat data nilai perbaikan Anda di sini.</p>
   </div>
 </div>
-
+</div>
 </body>
 </html>

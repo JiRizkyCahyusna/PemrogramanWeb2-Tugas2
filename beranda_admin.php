@@ -75,11 +75,11 @@
 <!-- Konten utama halaman -->
 <div class="container center-content">
   <div>
-    <!-- Teks utama di halaman beranda yang berada di tengah dengan ukuran besar -->
-    <h1>Selamat Datang di Sistem Informasi Akademik</h1>
+    <!-- Teks utama di halaman beranda admin yang berada di tengah dengan ukuran besar -->
+    <h2>Selamat Datang, Admin!</h2>
     
-    <!-- Subjudul atau teks tambahan -->
-    <p>Akses data mahasiswa dan nilai perbaikan.</p>
+    <!-- Subjudul atau teks tambahan untuk memberikan informasi kepada admin -->
+    <p>Kelola data mahasiswa dan nilai perbaikan dengan efisien.</p>
   </div>
 </div>
 

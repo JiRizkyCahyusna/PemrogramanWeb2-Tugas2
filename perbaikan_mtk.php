@@ -1,13 +1,11 @@
 <?php
-// Memanggil file Nilai_perbaikan.php
-require_once 'Nilai_perbaikan.php';
 // Memanggil file Matkul
-require_once 'Matkul.php';
+require_once 'matkul.php';
 
 // Membuat objek baru dari kelas Matkul
-$nilai_perbaikan = new Matkul();
+$Matematika = new Matematika();
 // Mengambil data nilai perbaikan untuk mata kuliah "Matematika"
-$dataNilai_perbaikan = $nilai_perbaikan->tampilData('Matematika');
+$dataMatematika = $Matematika->tampilData();
 ?>
 
 
@@ -90,10 +88,10 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData('Matematika');
         </thead>
         <tbody>
           <!-- Mengecek apakah data nilai perbaikan ada -->
-          <?php if (!empty($dataNilai_perbaikan)): ?>
+          <?php if (!empty($dataMatematika)): ?>
             <?php $no = 1; ?> <!-- Inisialisasi nomor urut, dimulai dari 1 untuk setiap mahasiswa -->
              <!-- Memulai perulangan untuk menampilkan data mahasiswa satu per satu -->
-            <?php foreach ($dataNilai_perbaikan as $nilai): ?>
+            <?php foreach ($dataMatematika as $nilai): ?>
               <tr>
                 <td><?php echo $no++ ?></td> <!-- Menampilkan nomor urut -->
                 <td><?php echo $nilai['perbaikan_id'] ?></td> <!-- Menampilkan id perbaikan nilai -->

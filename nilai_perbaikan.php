@@ -9,7 +9,7 @@ class Nilai_Perbaikan extends Database {
     }
 
     // Fungsi untuk mengambil data nilai_perbaikan dari tabel 'nilai_perbaikan' di database
-    public function tampilData($matkul=null) {
+    public function tampilData() {
         $sql = "SELECT * FROM nilai_perbaikan"; // Query SQL untuk mengambil semua data dari tabel 'nilai_perbaikan'
         $result = $this->koneksi->query($sql); // Menggunakan properti koneksi dari Database
         // Membuat array kosong untuk menampung hasil query
