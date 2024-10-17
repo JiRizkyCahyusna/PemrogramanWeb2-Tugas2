@@ -738,10 +738,13 @@ b. Data Mahasiswa
 ![alt text](/img/dataMahasiswa.png)
 <br><br>
 - Dropdown Nilai Perbaikan (Matematika dan PWEB )<br>
-c. Data nilai perbaikan Matematika
+c. Memilih Salah satu dari dropdown yang ada (antara Matematika dan Pweb) bisa mengakses keduanya tetapi secara bergantian
+![alt text](/img/dropdownnilai.png)
+<br><br>
+d. Data nilai perbaikan Matematika
 ![alt text](/img/nilaimtk_admn.png)
 <br><br>
-d. Data nilai perbaikan Pemrograman Web
+e. Data nilai perbaikan Pemrograman Web
 ![alt text](/img/nilaipweb_admn.png)
 
 ### 8. Beranda Sistem Informasi Akademik untuk Mahasiswa
@@ -824,10 +827,13 @@ d. Data nilai perbaikan Pemrograman Web
 ![alt text](/img/beranda_mhs.png)
 <br><br>
 - Pada Role Mahasiswa hanya dapat Melihat Data Nilai Perbaikan Matematika dan PWEB <br>
-a. Data nilai perbaikan Matematika
+a. Memilih Salah satu dari dropdown yang ada (antara Matematika dan Pweb) bisa mengakses keduanya tetapi secara bergantian
+![alt text](/img/dropdownnilai.png)
+<br><br>
+b. Data nilai perbaikan Matematika
 ![alt text](/img/nilaimtk_mhs.png)
 <br><br>
-b. Data nilai perbaikan Pemrograman Web
+c. Data nilai perbaikan Pemrograman Web
 ![alt text](/img/nilaipweb_mhsw.png)
 
 
