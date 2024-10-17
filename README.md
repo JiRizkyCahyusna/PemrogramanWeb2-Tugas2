@@ -143,6 +143,7 @@ Dimulai dengan `<!DOCTYPE html>` yang menentukan tipe dokumen sebagai HTML5.
 
 
 ### Output yang dihasilkan: 
+-Terdapat pilihan 2 user antara role admin dan mahasiswa-
 ![alt text](/img/beranda.png)
 
 
@@ -1233,6 +1234,7 @@ $dataMahasiswa = $mahasiswa->tampilData();
 ![alt text](/img/dataMahasiswa.png)
 
 ### Tampilkan Seluruh Output:
+-Terdapat pilihan 2 user antara role admin dan mahasiswa-
 ![alt text](/img/beranda.png)
 <br><br>
 ### User role Admin:
