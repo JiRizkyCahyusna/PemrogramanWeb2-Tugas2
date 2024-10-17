@@ -1,6 +1,8 @@
 <?php
+// Memastikan file nilai_perbaikan.php sudah di-include
+require_once 'nilai_perbaikan.php';
 // Membuat kelas Matkul yang mewarisi kelas Nilai_Perbaikan
-class Matkul extends Nilai_Perbaikan {
+class Matkul extends Nilai_Perbaikan{
     // Construktor untuk inisialisasi koneksi
      public function __construct() {
          parent::__construct(); // Mewarisi koneksi dari kelas Database

@@ -27,22 +27,33 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Beranda</a>
+      <a class="navbar-brand" href="beranda.php">Beranda</a>
     </div>
     <ul class="nav navbar-nav">
-       <!-- Menambahkan link Beranda di navigasi yang mengarah ke halaman index.php -->
-      <li><a href="beranda_admin.php?role=admin">Admin</a></li>
-       <!-- Menambahkan link ke halaman Data Mahasiswa -->
-      <li><a href="beranda_mhs.php?role=mahasiswa"> Mahasiswa</a></li> 
-      <!-- <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-        Nilai Perbaikan <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="perbaikan_mtk.php">Matematika</a></li>
-          <li><a href="perbaikan_pweb.php">Pemrograman Web</a></li>
-        </ul> -->
-      </li>
+    <?php if ($_GET['role'] == "admin") {?>
+      
+      <li><a href="beranda_data.php?role=admin">Overview</a></li>
+      <!-- Menambahkan link ke halaman Data Mahasiswa -->
+     <li><a href="tampil_mahasiswa.php?role=admin"> Mahasiswa</a></li>
+     <li class="dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+       Nilai Perbaikan <span class="caret"></span>
+       </a>
+       <ul class="dropdown-menu">
+         <li><a href="perbaikan_mtk.php?role=admin">Matematika</a></li>
+         <li><a href="perbaikan_pweb.php?role=admin">Pemrograman Web</a></li>
+       </ul>
+       <?php } elseif ($_GET['role'] == "mahasiswa") {?>
+         <li class="dropdown active">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+       Nilai Perbaikan <span class="caret"></span>
+       </a>
+       <ul class="dropdown-menu">
+         <li><a href="perbaikan_mtk.php?role=mahasiswa">Matematika</a></li>
+         <li><a href="perbaikan_pweb.php?role=mahasiswa">Pemrograman Web</a></li>
+       </ul>
+     </li>
+     <?php } ?>
     </ul>
   </div>
 </nav>
