@@ -643,7 +643,7 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 <br><br>
 
 
-### 7. Menampilkan Beranda untuk admin 
+### 7. Beranda Sistem Informasi Akademik untuk Admin
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -744,7 +744,7 @@ c. Data nilai perbaikan Matematika
 d. Data nilai perbaikan Pemrograman Web
 ![alt text](/img/nilaipweb_admn.png)
 
-### 8. Menampilkan Beranda Mahasiswa
+### 8. Beranda Sistem Informasi Akademik untuk Mahasiswa
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -833,7 +833,7 @@ b. Data nilai perbaikan Pemrograman Web
 
 <br>
 
-### 9. Menampilkan nilai perbaikan mtk 
+### 9. Halaman Nilai Perbaikan Matematika
 ```php
 <?php
 // Memanggil file Matkul
@@ -973,7 +973,7 @@ $dataMatematika = $Matematika->tampilData();
 
 
 
-### 10. Menampilkan Nilai perbaikan Pweb
+### 10. Halaman Nilai Perbaikan Pemrograman Web
 ```php
 <?php
 // Memanggil file Nilai_perbaikan.php
@@ -1112,7 +1112,7 @@ $dataPweb = $Pweb->tampilData();
 
 
 
-### 11. Menampilkan Data Mahasiswa
+### 11. Daftar Mahasiswa yang ada di D3 Teknik Informatika
 ```php
 <?php
 // Memanggil file Mahasiswa.php
