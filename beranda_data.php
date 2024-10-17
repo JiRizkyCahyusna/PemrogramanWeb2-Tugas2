@@ -20,9 +20,9 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
-  <meta charset="utf-8">
+  <meta charset="utf-8"> <!-- Mengatur karakter dan responsivitas halaman -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Menghubungkan dengan file CSS Bootstrap versi 3.4.1 untuk membuat tampilan yang responsif dan menarik -->
+  <!-- Memuat Bootstrap CSS dan JavaScript -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -34,34 +34,57 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
     <div class="navbar-header">
       <a class="navbar-brand" href="beranda.php">Beranda</a>
     </div>
+    <!-- Membuat menu navigasi utama -->
     <ul class="nav navbar-nav">
-    <?php if ($_GET['role'] == "admin") {?>
-      
-      <li class="active"><a href="beranda_data.php?role=admin">Overview</a></li>
-      <!-- Menambahkan link ke halaman Data Mahasiswa -->
-     <li><a href="tampil_mahasiswa.php?role=admin"> Mahasiswa</a></li>
-     <li class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-       Nilai Perbaikan <span class="caret"></span>
-       </a>
-       <ul class="dropdown-menu">
-         <li><a href="perbaikan_mtk.php?role=admin">Matematika</a></li>
-         <li><a href="perbaikan_pweb.php?role=admin">Pemrograman Web</a></li>
-       </ul>
-       <?php } elseif ($_GET['role'] == "mahasiswa") {?>
-         <li class="dropdown">
-       <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-       Nilai Perbaikan <span class="caret"></span>
-       </a>
-       <ul class="dropdown-menu">
-         <li><a href="perbaikan_mtk.php?role=mahasiswa">Matematika</a></li>
-         <li><a href="perbaikan_pweb.php?role=mahasiswa">Pemrograman Web</a></li>
-       </ul>
-     </li>
-     <?php } ?>
-    </ul>
-  </div>
-</nav>
+        <!-- Mengecek role pengguna menggunakan parameter URL -->
+        <?php if ($_GET['role'] == "admin") { ?>
+          
+          <!-- Menampilkan menu "Overview" jika role adalah admin, serta menjadikannya aktif -->
+          <li class="active"><a href="beranda_data.php?role=admin">Overview</a></li>
+
+          <!-- Menambahkan link ke halaman "Mahasiswa" untuk admin -->
+          <li><a href="tampil_mahasiswa.php?role=admin">Mahasiswa</a></li>
+
+          <!-- Membuat dropdown menu untuk nilai perbaikan -->
+          <li class="dropdown">
+            <!-- Teks untuk menu dropdown dan ikon caret -->
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+              Nilai Perbaikan <span class="caret"></span>
+            </a>
+            
+            <!-- Dropdown menu untuk memilih mata kuliah yang tersedia -->
+            <ul class="dropdown-menu">
+              <!-- Link untuk mata kuliah Matematika dalam nilai perbaikan -->
+              <li><a href="perbaikan_mtk.php?role=admin">Matematika</a></li>
+              
+              <!-- Link untuk mata kuliah Pemrograman Web dalam nilai perbaikan -->
+              <li><a href="perbaikan_pweb.php?role=admin">Pemrograman Web</a></li>
+            </ul>
+          </li>
+
+        <!-- Kondisi kedua, jika role adalah mahasiswa -->
+        <?php } elseif ($_GET['role'] == "mahasiswa") { ?>
+
+          <!-- Membuat dropdown menu untuk nilai perbaikan bagi mahasiswa -->
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+              Nilai Perbaikan <span class="caret"></span>
+            </a>
+            
+            <!-- Dropdown menu untuk mahasiswa, memungkinkan memilih perbaikan mata kuliah -->
+            <ul class="dropdown-menu">
+              <!-- Link untuk nilai perbaikan mata kuliah Matematika untuk mahasiswa -->
+              <li><a href="perbaikan_mtk.php?role=mahasiswa">Matematika</a></li>
+              
+              <!-- Link untuk nilai perbaikan mata kuliah Pemrograman Web untuk mahasiswa -->
+              <li><a href="perbaikan_pweb.php?role=mahasiswa">Pemrograman Web</a></li>
+            </ul>
+          </li>
+
+        <?php } ?>
+      </ul>
+    </div>
+  </nav>
   
 <div class="container mt-3">
   <!-- Header dan Tabel Mahasiswa -->

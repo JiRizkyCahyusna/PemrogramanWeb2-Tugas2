@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Judul halaman yang ditampilkan di tab browser -->
   <title>Selamat Datang di Sistem Informasi Akademik</title>
-  <meta charset="utf-8">
+  <meta charset="utf-8">  <!-- Mengatur karakter dan responsivitas halaman -->
+  <!-- Memuat Bootstrap CSS dan JavaScript -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -29,6 +31,7 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Beranda</a>
     </div>
+    <!-- Menu navigasi utama -->
     <ul class="nav navbar-nav">
        <!-- Menambahkan link Beranda di navigasi yang mengarah ke halaman index.php -->
       <li><a href="beranda_admin.php?role=admin">Admin</a></li>
@@ -51,8 +54,8 @@
 <!-- Konten Utama -->
 <div class="container center-content">
   <div>
-    <h1>Selamat Datang di Sistem Informasi Akademik</h1> <!-- Teks di tengah dengan font besar -->
-    <p>Akses data mahasiswa dan nilai perbaikan.</p>
+    <h1>Selamat Datang di Sistem Informasi Akademik</h1> <!-- Teks utama di halaman beranda yang berada di tengah dengan ukuran besar -->
+    <p>Akses data mahasiswa dan nilai perbaikan.</p> <!-- Subjudul atau teks tambahan -->
   </div>
 </div>
 

@@ -14,40 +14,45 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData('Pemrograman Web');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Bootstrap Example</title>  <!-- Judul dan pengaturan dasar halaman -->
   <meta charset="utf-8">
+  <!-- Memuat Bootstrap CSS dan JavaScript -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<!-- Membuat navigasi bar menggunakan Bootstrap -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="beranda.php">Beranda</a>
     </div>
+    <!-- Menu navigasi utama -->
     <ul class="nav navbar-nav">
+      <!-- Memeriksa role (admin atau mahasiswa) melalui parameter URL -->
     <?php if ($_GET['role'] == "admin") {?>
-      
-      <li><a href="beranda_data.php?role=admin">Overview</a></li>
-      <!-- Menambahkan link ke halaman Data Mahasiswa -->
-     <li><a href="tampil_mahasiswa.php?role=admin"> Mahasiswa</a></li>
-     <li class="dropdown active">
+      <!-- Jika role adalah admin, tampilkan menu khusus untuk admin -->
+      <li><a href="beranda_data.php?role=admin">Overview</a></li> <!-- Link ke halaman overview -->
+     <li><a href="tampil_mahasiswa.php?role=admin"> Mahasiswa</a></li> <!-- Link ke halaman daftar mahasiswa -->
+     <li class="dropdown active"> <!-- Dropdown menu untuk nilai perbaikan -->
        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
        Nilai Perbaikan <span class="caret"></span>
        </a>
        <ul class="dropdown-menu">
+        <!-- Menu perbaikan nilai Matematika dan Pemrograman Web untuk admin -->
          <li><a href="perbaikan_mtk.php?role=admin">Matematika</a></li>
          <li><a href="perbaikan_pweb.php?role=admin">Pemrograman Web</a></li>
        </ul>
        <?php } elseif ($_GET['role'] == "mahasiswa") {?>
+        <!-- Jika role adalah mahasiswa, tampilkan menu khusus untuk mahasiswa -->
          <li class="dropdown active">
        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
        Nilai Perbaikan <span class="caret"></span>
        </a>
        <ul class="dropdown-menu">
+        <!-- Menu perbaikan nilai Matematika dan Pemrograman Web untuk mahasiswa -->
          <li><a href="perbaikan_mtk.php?role=mahasiswa">Matematika</a></li>
          <li><a href="perbaikan_pweb.php?role=mahasiswa">Pemrograman Web</a></li>
        </ul>
@@ -59,13 +64,17 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData('Pemrograman Web');
   
   
 <div class="container mt-3">
-<h2>Daftar Nilai Perbaikan Mahasiswa</h2>
-<p>Daftar Nilai Perbaikan Matakuliah Pemrograman Web</p>           
+  <!-- Judul halaman untuk daftar nilai perbaikan mahasiswa -->
+  <h2>Daftar Nilai Perbaikan Mahasiswa</h2>
+  <!-- Deskripsi singkat tentang daftar perbaikan untuk matkul Pemrograman Web -->
+  <p>Daftar Nilai Perbaikan Matakuliah Pemrograman Web</p>           
+  <!-- Bagian untuk menampilkan tabel nilai perbaikan -->
   <div class="card-body">
-      <!-- Membuat tabel Bootstrap dengan kelas 'table-bordered' -->
-      <table class="table table-bordered" id="tableNilaiPerbaikan">
-        <thead>
-          <tr>
+    <!-- Tabel dengan garis pembatas menggunakan Bootstrap -->
+    <table class="table table-bordered" id="tableNilaiPerbaikan">
+      <!-- Header tabel -->
+      <thead>
+        <tr>
             <!-- Bagian header tabel yang mendefinisikan judul kolom -->
             <th scope="col">NO</th> <!-- Kolom untuk menampilkan nomor urut -->
             <th scope="col">ID PERBAIKAN</th> <!-- Kolom untuk menampilkan ID Perbaikan  -->
