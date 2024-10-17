@@ -709,8 +709,8 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 </body>
 </html>
 ```
-Output yang dihasilkan:
-![alt text](beranda_admin.png)
+### Output yang dihasilkan:
+![alt text](/img/beranda_admin.png)
 
 ### 8. Menampilkan Beranda Mahasiswa
 ```html
@@ -781,7 +781,7 @@ Output yang dihasilkan:
 ```
 
 ### Output yang dihasilkan:
-![alt text](beranda_mhs.png)
+![alt text](/img/beranda_mhs.png)
 
 ### 9. Menampilkan nilai perbaikan mtk 
 ```php
@@ -908,10 +908,9 @@ $dataMatematika = $Matematika->tampilData();
 </html>
 ```
 ### Output yang Dihasilkan:
-![alt text](nilaimtk_admin.png)
+![alt text](/img/nilaimtk_mhs.png)
+![alt text](/img/nilaimtk_admin.png)
 <br>
-
-![alt text](nilaimtk_mhs.png)
 
 
 
