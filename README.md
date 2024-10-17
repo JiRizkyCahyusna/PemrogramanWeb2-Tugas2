@@ -833,7 +833,7 @@ b. Data nilai perbaikan Pemrograman Web
 
 <br>
 
-### 9. Halaman Nilai Perbaikan Matematika
+### 9. Halaman Data Nilai Perbaikan Matematika
 ```php
 <?php
 // Memanggil file Matkul
@@ -973,7 +973,7 @@ $dataMatematika = $Matematika->tampilData();
 
 
 
-### 10. Halaman Nilai Perbaikan Pemrograman Web
+### 10. Halaman Data Nilai Perbaikan Pemrograman Web
 ```php
 <?php
 // Memanggil file Nilai_perbaikan.php
