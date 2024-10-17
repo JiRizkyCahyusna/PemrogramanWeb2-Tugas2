@@ -49,8 +49,6 @@
     </ul>
   </div>
 </nav>
-  
-
 <!-- Konten Utama -->
 <div class="container center-content">
   <div>
