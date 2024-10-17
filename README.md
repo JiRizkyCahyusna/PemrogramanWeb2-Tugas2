@@ -735,7 +735,7 @@ a. Keseluruhan Data (Overview)
 ![alt text](/img/overview2.png)
 <br><br>
 b. Data Mahasiswa
-![alt text](/img/dataMahasiswaa.png)
+![alt text](/img/dataMahasiswa.png)
 <br><br>
 - Dropdown Nilai Perbaikan (Matematika dan PWEB )<br>
 c. Data nilai perbaikan Matematika
@@ -1221,4 +1221,4 @@ $dataMahasiswa = $mahasiswa->tampilData();
 3. Di dalam `<body>`, terdapat judul dan deskripsi halaman, diikuti oleh tabel yang menampilkan data mahasiswa, termasuk nomor urut, ID mahasiswa, NIM, nama, alamat, email, dan nomor telepon. Tabel ini menggunakan perulangan foreach untuk menampilkan data setiap mahasiswa secara berurutan. Jika tidak ada data mahasiswa, pesan yang sesuai ditampilkan di dalam tabel. 
 
 ### Output yang Dihasilkan:
-![alt text](/img/dataMahasiswaa.png)
+![alt text](/img/dataMahasiswa.png)
