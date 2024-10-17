@@ -435,7 +435,8 @@ class Matematika extends Nilai_Perbaikan{
 }
 ?>
 ```
-- Dalam implementasi ini, baik kelas `Matematika` maupun kelas  `Pweb` menggunakan metode tampilData() yang memiliki nama sama tetapi dengan isi yang berbeda. Metode ini digunakan untuk mengambil data nilai perbaikan berdasarkan mata kuliah masing-masing. Polimorfisme sudah diterapkan meskipun metode yang dipanggil `tampilData()` sama, implementasinya berbeda sesuai dengan objek yang dipanggil (apakah itu objek Matematika atau Pweb). Dengan cara ini, dapat menggunakan metode dengan cara yang konsisten di seluruh aplikasi, sementara isi spesifik dari metode tersebut disesuaikan dengan konteks kelas yang bersangkutan. <br><br>
+- Dalam implementasi ini, baik kelas `Matematika` maupun kelas  `Pweb` menggunakan metode tampilData() yang memiliki nama sama tetapi dengan isi yang berbeda. Metode ini digunakan untuk mengambil data nilai perbaikan berdasarkan mata kuliah masing-masing. Polimorfisme sudah diterapkan meskipun metode yang dipanggil `tampilData()` sama, implementasinya berbeda sesuai dengan objek yang dipanggil (apakah itu objek Matematika atau Pweb). Dengan cara ini, dapat menggunakan metode dengan cara yang konsisten di seluruh aplikasi, sementara isi spesifik dari metode tersebut disesuaikan dengan konteks kelas yang bersangkutan. 
+<br><br>
 
 b. Terdapat pada file perbaikan_mtk.php dan perbaikan_pweb.php
 ```php
