@@ -455,7 +455,7 @@ $dataPweb = $Pweb->tampilData();
 - Dalam coding di atas, dapat memanggil metode `tampilData()` pada objek yang berbeda ($matematika dan $pweb), hasil yang diperoleh akan berbeda sesuai dengan implementasi spesifik dari setiap kelas. Polimorfisme memungkinkan penggunaan metode yang sama dengan perilaku yang berbeda, meningkatkan fleksibilitas dan keterbacaan kode.
 <br> <br>
 
-### 6. Menampilkan data mahasiswa dan data nilai perbaikan (beranda_data)
+### 6. Menampilkan data mahasiswa dan data nilai perbaikan/Overview (beranda_data)
 - pada beranda_data.php adalah halaman utama yang menampilkan daftar mahasiswa dan nilai perbaikan mereka, di mana data tersebut diambil langsung dari database dan ditampilkan menggunakan antarmuka Bootstrap.
 <br>
 
@@ -635,6 +635,13 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 3. Tabel Mahasiswa: Setelah bagian navigasi, halaman menampilkan daftar mahasiswa dalam tabel. Menampilkan daftar mahasiswa (ID, NIM, Nama, Alamat, Email, No. Telepon).
 4. Tabel Nilai Perbaikan: Setelah daftar mahasiswa, halaman menampilkan tabel kedua berisi data nilai perbaikan untuk mata kuliah Matematika dan Pemrograman Web. Menampilkan data nilai perbaikan (ID Perbaikan, Tanggal, Keterangan, Mahasiswa, Matkul, ID Semester,ID Nilai, ID Dosen).
 
+### Output yang dihasilkan:
+![alt text](/img/overview1.png)
+![alt text](/img/overview2.png)
+
+<br><br>
+
+
 ### 7. Menampilkan Beranda untuk admin 
 ```html
 <!DOCTYPE html>
@@ -709,14 +716,32 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 </body>
 </html>
 ```
+### Penjelasan:
+1. Kode HTML di atas adalah sebuah halaman beranda yang dirancang untuk admin dalam sebuah sistem informasi akademik. Pertama, halaman ini dimulai dengan mendeklarasikan tipe dokumen dan menyetel pengaturan karakter dan responsivitas menggunakan elemen `<meta>`.
+2. Selanjutnya, Bootstrap CSS dan JavaScript dimuat untuk memberikan desain yang responsif dan tampilan yang menarik. Pada bagian `<style>`, terdapat definisi CSS untuk memposisikan konten di tengah layar secara vertikal dan horizontal, serta mengatur ukuran font untuk judul. 
+3. Di dalam elemen `<body>`, terdapat navigasi bar menggunakan komponen Bootstrap, yang berisi tautan untuk navigasi ke berbagai halaman terkait admin, seperti "Overview" dan "Mahasiswa", serta dropdown untuk nilai perbaikan di mata pelajaran Matematika dan Pemrograman Web. 
+4. Konten utama halaman menampilkan pesan selamat datang kepada admin, dengan ukuran teks besar dan penjelasan tambahan yang memberi tahu admin tentang fungsionalitas halaman ini. Halaman ini secara keseluruhan dirancang untuk menjadi intuitif dan mudah dinavigasi, memungkinkan admin untuk mengelola data dengan efisien.
 
-- Kode HTML di atas adalah sebuah halaman beranda yang dirancang untuk admin dalam sebuah sistem informasi akademik. Pertama, halaman ini dimulai dengan mendeklarasikan tipe dokumen dan menyetel pengaturan karakter dan responsivitas menggunakan elemen `<meta>`. 
-- Selanjutnya, Bootstrap CSS dan JavaScript dimuat untuk memberikan desain yang responsif dan tampilan yang menarik.
-- Pada bagian `<style>`, terdapat definisi CSS untuk memposisikan konten di tengah layar secara vertikal dan horizontal, serta mengatur ukuran font untuk judul. Di dalam elemen `<body>`, terdapat navigasi bar menggunakan komponen Bootstrap, yang berisi tautan untuk navigasi ke berbagai halaman terkait admin, seperti "Overview" dan "Mahasiswa", serta dropdown untuk nilai perbaikan di mata pelajaran Matematika dan Pemrograman Web. 
-- Konten utama halaman menampilkan pesan selamat datang kepada admin, dengan ukuran teks besar dan penjelasan tambahan yang memberi tahu admin tentang fungsionalitas halaman ini. Halaman ini secara keseluruhan dirancang untuk menjadi intuitif dan mudah dinavigasi, memungkinkan admin untuk mengelola data dengan efisien.
+
 
 ### Output yang dihasilkan:
+- konten utama dalam role mahasiswa
 ![alt text](/img/beranda_admin.png)
+<br><br>
+- Pada Role Mahasiswa dapat Melihat Keseluruhan Data, Data Mahasiswa, dan dropdown Nilai Perbaikan(Matematika dan PWEB)<br>
+a. Keseluruhan Data (Overview)
+![alt text](/img/overview1.png)
+![alt text](/img/overview2.png)
+<br><br>
+b. Data Mahasiswa
+![alt text](/img/dataMahasiswaa.png)
+<br><br>
+- Dropdown Nilai Perbaikan (Matematika dan PWEB )<br>
+c. Data nilai perbaikan Matematika
+![alt text](/img/nilaimtk_admn.png)
+<br><br>
+d. Data nilai perbaikan Pemrograman Web
+![alt text](/img/nilaipweb_admn.png)
 
 ### 8. Menampilkan Beranda Mahasiswa
 ```html
@@ -785,9 +810,27 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 </body>
 </html>
 ```
+### Penjelasan: 
+1. Kode HTML di atas menyajikan halaman beranda untuk mahasiswa dalam sebuah sistem informasi akademik. Dimulai dengan mendeklarasikan tipe dokumen dan mengatur pengaturan karakter dan responsivitas menggunakan elemen `<meta>`, halaman ini menggunakan Bootstrap CSS dan JavaScript untuk menciptakan tampilan yang responsif. 
+2. Di dalam `<style>`, terdapat definisi CSS yang mengatur konten agar terpusat di layar dengan ukuran font yang besar untuk judul.
+3. Navigasi bar yang dibangun dengan Bootstrap menyertakan tautan untuk beranda dan dropdown untuk nilai perbaikan, yang memungkinkan mahasiswa mengakses halaman untuk perbaikan nilai di mata pelajaran Matematika dan Pemrograman Web. 
+4. Konten utama halaman berisi pesan sambutan kepada mahasiswa, yang menekankan kemampuan mereka untuk melihat data nilai perbaikan, membuat halaman ini fungsional dan informatif. Desain halaman bertujuan untuk memberikan kemudahan bagi mahasiswa dalam mengakses informasi terkait akademis mereka dengan cara yang intuitif dan menarik.
+
+
 
 ### Output yang dihasilkan:
+- konten utama dalam role mahasiswa
 ![alt text](/img/beranda_mhs.png)
+<br><br>
+- Pada Role Mahasiswa hanya dapat Melihat Data Nilai Perbaikan Matematika dan PWEB <br>
+a. Data nilai perbaikan Matematika
+![alt text](/img/nilaimtk_mhs.png)
+<br><br>
+b. Data nilai perbaikan Pemrograman Web
+![alt text](/img/nilaipweb_mhsw.png)
+
+
+<br>
 
 ### 9. Menampilkan nilai perbaikan mtk 
 ```php
@@ -913,9 +956,17 @@ $dataMatematika = $Matematika->tampilData();
 </body>
 </html>
 ```
+
+### Penjelasan:
+1. Kode PHP dan HTML di atas  untuk menampilkan daftar nilai perbaikan mahasiswa untuk mata kuliah Matematika. Pertama, file matkul.php diambil untuk memuat kelas yang diperlukan, dan objek baru dari kelas Pweb dibuat untuk mengakses data. Data nilai perbaikan diambil menggunakan metode `tampilData()`. 
+2. Selanjutnya, navigasi bar dibangun dengan menggunakan Bootstrap, yang menyesuaikan menu berdasarkan peran pengguna (admin atau mahasiswa) yang ditentukan oleh parameter URL role.
+3. Dalam bagian `<body>`, terdapat konten utama yang mencakup judul halaman dan deskripsi nilai perbaikan, diikuti oleh tabel yang menampilkan data perbaikan nilai matakuliah Matematika mahasiswa. 
+4. Tabel perbaikan nilai Matematika: ini terdiri dari beberapa kolom untuk nomor urut, ID perbaikan, tanggal perbaikan, keterangan, id mahasiswa, matkul, id semester, id nilai,dan id dosen. Menggunakan perulangan foreach, setiap entri data ditampilkan dalam baris tabel, dan jika tidak ada data, pesan yang sesuai ditampilkan. Kode ini memberikan antarmuka yang jelas dan terstruktur bagi pengguna untuk melihat informasi perbaikan nilai, memanfaatkan Bootstrap untuk tampilan yang responsif.
+
+
 ### Output yang Dihasilkan:
+![alt text](/img/nilaimtk_admn.png)
 ![alt text](/img/nilaimtk_mhs.png)
-![alt text](/img/nilaimtk_admin.png)
 <br>
 
 
@@ -1047,10 +1098,16 @@ $dataPweb = $Pweb->tampilData();
 </body>
 </html>
 ```
+### Penjelasan:
+1. Kode PHP dan HTML di atas  untuk menampilkan daftar nilai perbaikan mahasiswa untuk mata kuliah Pemrograman Web. Pertama, file matkul.php diambil untuk memuat kelas yang diperlukan, dan objek baru dari kelas Pweb dibuat untuk mengakses data. Data nilai perbaikan diambil menggunakan metode `tampilData()`. 
+2. Selanjutnya, navigasi bar dibangun dengan menggunakan Bootstrap, yang menyesuaikan menu berdasarkan peran pengguna (admin atau mahasiswa) yang ditentukan oleh parameter URL role.
+3. Dalam bagian `<body>`, terdapat konten utama yang mencakup judul halaman dan deskripsi nilai perbaikan, diikuti oleh tabel yang menampilkan data perbaikan nilai matakuliah Pemrograman Web mahasiswa. 
+4. Tabel perbaikan nilai Pemrograman Web: ini terdiri dari beberapa kolom untuk nomor urut, ID perbaikan, tanggal perbaikan, keterangan, id mahasiswa, matkul, id semester, id nilai,dan id dosen. Menggunakan perulangan foreach, setiap entri data ditampilkan dalam baris tabel, dan jika tidak ada data, pesan yang sesuai ditampilkan. Kode ini memberikan antarmuka yang jelas dan terstruktur bagi pengguna untuk melihat informasi perbaikan nilai, memanfaatkan Bootstrap untuk tampilan yang responsif.
+
 ### Output yang Dihasilkan:
-![alt text](/img/nilaipweb_admin.png)
+![alt text](/img/nilaipweb_admn.png)
+![alt text](/img/nilaipweb_mhsw.png)
 <br>
-![alt text](/img/nilaipweb_mhs.png)
 
 
 
@@ -1157,6 +1214,10 @@ $dataMahasiswa = $mahasiswa->tampilData();
 </body>
 </html>
 ```
+### Penjelasan:
+1. Kode di atas digunakan untuk menampilkan daftar mahasiswa yang terdaftar dalam program studi D3 Teknik Informatika. Pertama, file mahasiswa.php dimuat untuk mengakses kelas Mahasiswa, kemudian sebuah instance dari kelas tersebut dibuat untuk mengambil data mahasiswa melalui metode `tampilData()`.
+2. Navigasi bar dihasilkan menggunakan Bootstrap, yang menyesuaikan menu berdasarkan peran pengguna (admin), memberikan akses ke halaman overview dan data mahasiswa, serta dropdown untuk perbaikan nilai. 
+3. Di dalam `<body>`, terdapat judul dan deskripsi halaman, diikuti oleh tabel yang menampilkan data mahasiswa, termasuk nomor urut, ID mahasiswa, NIM, nama, alamat, email, dan nomor telepon. Tabel ini menggunakan perulangan foreach untuk menampilkan data setiap mahasiswa secara berurutan. Jika tidak ada data mahasiswa, pesan yang sesuai ditampilkan di dalam tabel. 
 
 ### Output yang Dihasilkan:
-![alt text](/img/dataMahasiswa.png)
+![alt text](/img/dataMahasiswaa.png)
