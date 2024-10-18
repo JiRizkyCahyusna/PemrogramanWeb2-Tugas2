@@ -458,7 +458,12 @@ $dataPweb = $Pweb->tampilData();
 <br> <br>
 
 ### Output yang dihasilkan:
-![alt text](/img/dropdowni.png)
+- yang berada pada user role admin:
+![alt text](/img/dropdownilai_admn.png)
+<br><br>
+- yang berada pada user role mahasiswa:
+![alt text](/img/dropdownnilai_mhs.png)
+
 
 ### 6. Menampilkan data mahasiswa dan data nilai perbaikan/Overview (beranda_data)
 - pada beranda_data.php adalah halaman utama yang menampilkan daftar mahasiswa dan nilai perbaikan mereka, di mana data tersebut diambil langsung dari database dan ditampilkan menggunakan antarmuka Bootstrap.
@@ -647,7 +652,7 @@ $dataNilai_perbaikan = $nilai_perbaikan->tampilData();
 <br><br>
 
 
-### 7. Beranda Sistem Informasi Akademik untuk Admin
+### 7. Beranda Sistem Informasi Akademik untuk Admin (User Role Admin)
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -751,7 +756,7 @@ d. Data nilai perbaikan Matematika
 e. Data nilai perbaikan Pemrograman Web
 ![alt text](/img/nilaipweb_admn.png)
 
-### 8. Beranda Sistem Informasi Akademik untuk Mahasiswa
+### 8. Beranda Sistem Informasi Akademik untuk Mahasiswa (User Role Mahasiswa)
 ```html
 <!DOCTYPE html>
 <html lang="en">
