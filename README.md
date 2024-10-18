@@ -458,7 +458,7 @@ $dataPweb = $Pweb->tampilData();
 <br> <br>
 
 ### Output yang dihasilkan:
-
+![alt text](/img/dropdowni.png)
 
 ### 6. Menampilkan data mahasiswa dan data nilai perbaikan/Overview (beranda_data)
 - pada beranda_data.php adalah halaman utama yang menampilkan daftar mahasiswa dan nilai perbaikan mereka, di mana data tersebut diambil langsung dari database dan ditampilkan menggunakan antarmuka Bootstrap.
